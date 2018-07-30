@@ -57,4 +57,6 @@
 
 import { ExampleSubjects } from './examples/4-subjects';
 
-ExampleSubjects.testSubject();
+// ExampleSubjects.testSubject();
+// ExampleSubjects.testBehaviorSubject();
+ExampleSubjects.testReplaySubject();
