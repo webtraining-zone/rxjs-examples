@@ -1,8 +1,8 @@
-// import { ObservablesFromEventExample } from './examples/1-from-events';
+import { ObservablesFromEventExample } from './examples/2-from-events';
 // import { HttpClient } from './examples/3-http-client';
 // import { RenderEngine } from './examples/3-render-engine';
 
-import { ExampleCreate } from './examples/1-example-create';
+// import { ExampleCreate } from './examples/1-example-create';
 
 // ExampleCreate.createObservableWithNumbers().subscribe(
 //     (number) => {
@@ -12,27 +12,30 @@ import { ExampleCreate } from './examples/1-example-create';
 //     () => console.log('Completed'),
 // );
 
-const observer = ExampleCreate.createObservableWithStreamNumbers().subscribe(
-    number => console.log(number),
-    error => console.error(error),
-    () => console.log('Completed'),
-);
-
-setTimeout(() => {
-  observer.unsubscribe();
-  console.warn('Unsubscribed');
-}, 2001);
+// const observer = ExampleCreate.createObservableWithStreamNumbers().subscribe(
+//     number => console.log(number),
+//     error => console.error(error),
+//     () => console.log('Completed'),
+// );
+//
+// setTimeout(() => {
+//   observer.unsubscribe();
+//   console.warn('Unsubscribed');
+// }, 2001);
 
 //
 // Example with events
 //
-// const exampleEvents = new ObservablesFromEventExample();
+const exampleEvents = new ObservablesFromEventExample();
 
-// exampleEvents.getObservable().subscribe(
-//     data => {
-//       console.log(data.screenX);
-//     },
-// );
+setTimeout(() => {
+  // The "observable" is hot becuase it started even before the subscription was activated!
+  exampleEvents.getHotObservable().subscribe(
+      data => {
+        console.log(data.screenX);
+      },
+  );
+}, 3000);
 
 // exampleEvents.testClickEvent();
 

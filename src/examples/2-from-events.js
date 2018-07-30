@@ -3,8 +3,9 @@ import { throttleTime } from 'rxjs/operators';
 
 export class ObservablesFromEventExample {
 
-  getObservable() {
+  getHotObservable() {
     // Create an observable from the 'mousemove' event
+    // "Hot" Observable
     const observableMouseEvents$ = fromEvent(document, 'mousemove');
 
     // Use the operator throttleTime via a pipe
