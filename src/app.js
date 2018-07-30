@@ -1,9 +1,10 @@
 import { from } from 'rxjs';
+import { ObservablesFromEventExample } from './examples/1-from-events';
 
-const observable = from([1, 2, 3]);
+const exampleEvents = new ObservablesFromEventExample();
 
-observable.subscribe(
-    number => console.log(number),
-    error => console.warn(error),
-    () => console.log('Finished!'),
-);
+// exampleEvents.getObservable().subscribe(
+//     data => console.log(data),
+// );
+
+exampleEvents.testClickEvent();

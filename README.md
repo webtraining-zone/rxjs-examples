@@ -1,7 +1,6 @@
-# RxJS Boilerplate
+# RxJS Examples
 
-If you want to start building RxJS-based applications in a Webpack 
-environment, then this boilerplate is for you.
+Based on [RxJS Boilerplate](https://github.com/webtraining-zone/rxjs-boilerplate).
 
 ## Version
 1.0.0
