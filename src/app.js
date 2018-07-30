@@ -4,13 +4,24 @@
 
 import { ExampleCreate } from './examples/1-example-create';
 
-ExampleCreate.createObservableWithNumbers().subscribe(
-    (number) => {
-      console.log(number);
-    },
-    (error) => console.error(error),
+// ExampleCreate.createObservableWithNumbers().subscribe(
+//     (number) => {
+//       console.log(number);
+//     },
+//     (error) => console.error(error),
+//     () => console.log('Completed'),
+// );
+
+const observer = ExampleCreate.createObservableWithStreamNumbers().subscribe(
+    number => console.log(number),
+    error => console.error(error),
     () => console.log('Completed'),
 );
+
+setTimeout(() => {
+  observer.unsubscribe();
+  console.warn('Unsubscribed');
+}, 2001);
 
 //
 // Example with events
