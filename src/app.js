@@ -1,4 +1,4 @@
-import { ObservablesFromEventExample } from './examples/2-from-events';
+// import { ObservablesFromEventExample } from './examples/2-from-events';
 // import { HttpClient } from './examples/3-http-client';
 // import { RenderEngine } from './examples/3-render-engine';
 
@@ -26,16 +26,16 @@ import { ObservablesFromEventExample } from './examples/2-from-events';
 //
 // Example with events
 //
-const exampleEvents = new ObservablesFromEventExample();
-
-setTimeout(() => {
-  // The "observable" is hot becuase it started even before the subscription was activated!
-  exampleEvents.getHotObservable().subscribe(
-      data => {
-        console.log(data.screenX);
-      },
-  );
-}, 3000);
+// const exampleEvents = new ObservablesFromEventExample();
+//
+// setTimeout(() => {
+//   // The "observable" is hot becuase it started even before the subscription was activated!
+//   exampleEvents.getHotObservable().subscribe(
+//       data => {
+//         console.log(data.screenX);
+//       },
+//   );
+// }, 3000);
 
 // exampleEvents.testClickEvent();
 
@@ -54,3 +54,7 @@ setTimeout(() => {
 //   });
 //
 // });
+
+import { ExampleSubjects } from './examples/4-subjects';
+
+ExampleSubjects.testSubject();

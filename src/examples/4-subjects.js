@@ -1,0 +1,30 @@
+import { Subject } from 'rxjs';
+
+// Subject is an observer capable to emit values
+// Observable and Observer at the same time
+
+export class ExampleSubjects {
+
+  static testSubject() {
+    const subject$ = new Subject();
+
+    let $observer1 = subject$.subscribe(
+        data => console.log('Observer 1: ', data));
+
+    subject$.next(1);
+    subject$.next(2);
+
+    let $observer2 = subject$.subscribe(
+        data => console.log('--> Observer 2: ', data),
+        error => console.error(error),
+        () => 'Observer 2 completed!');
+
+    subject$.next(3);
+
+    $observer2.unsubscribe();
+
+    subject$.next(4);
+
+  }
+}
+
