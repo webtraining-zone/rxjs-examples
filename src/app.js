@@ -55,8 +55,13 @@
 //
 // });
 
-import { ExampleSubjects } from './examples/4-subjects';
+// import { ExampleSubjects } from './examples/4-subjects';
 
 // ExampleSubjects.testSubject();
 // ExampleSubjects.testBehaviorSubject();
-ExampleSubjects.testReplaySubject();
+// ExampleSubjects.testReplaySubject();
+
+import { OperatorsExamples } from './examples/5-operators';
+
+// OperatorsExamples.testMergeOperator();
+OperatorsExamples.testFilterOperator();

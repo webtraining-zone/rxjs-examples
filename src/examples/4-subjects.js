@@ -53,7 +53,7 @@ export class ExampleSubjects {
 
   }
 
-  //
+  // ReplaySubject
   static testReplaySubject() {
     // Number of values to be dispatched for new observers
     const subject$ = new ReplaySubject(3);
