@@ -64,4 +64,5 @@
 import { OperatorsExamples } from './examples/5-operators';
 
 // OperatorsExamples.testMergeOperator();
-OperatorsExamples.testFilterOperator();
+// OperatorsExamples.testFilterOperator();
+OperatorsExamples.testPluckOperator();

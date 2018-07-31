@@ -2,7 +2,7 @@
 // Modify the "stream" and return a new one
 // http://rxmarbles.com/
 import { Observable, merge as mergeStatic, from } from 'rxjs';
-import { filter, map } from 'rxjs/operators';
+import { filter, map, pluck } from 'rxjs/operators';
 
 export class OperatorsExamples {
 
@@ -45,5 +45,31 @@ export class OperatorsExamples {
         subscribe(
             number => console.log(number),
         );
+  }
+
+  static testPluckOperator() {
+
+    const observable$ = from([
+      {
+        id: 1,
+        email: 'esmeralda@webtraining.zone',
+        roles: ['teacher'],
+      }, {
+        id: 2,
+        email: 'luis@webtraining.zone',
+        roles: ['student'],
+      }, {
+        id: 2,
+        email: 'ady@webtraining.zone',
+        roles: ['teacher'],
+      }]);
+
+    // Get only "email" property
+    observable$.pipe(
+        pluck('email'), map(email => email.toUpperCase())).
+        subscribe(
+            number => console.log(number),
+        );
+    
   }
 }
