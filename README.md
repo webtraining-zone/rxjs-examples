@@ -1,54 +1,56 @@
-# RxJS Examples
+# RxJS con ejemplos
 
-Based on [RxJS Boilerplate](https://github.com/webtraining-zone/rxjs-boilerplate).
+![Observables con JavaScript](https://webtraining.zone/img/metadata-courses/observables-javascript.jpg)
 
-## Version
+Este repositorio está basado en [RxJS Boilerplate](https://github.com/webtraining-zone/rxjs-boilerplate).
+
+## Versión
 1.0.0
 
-This version uses RxJS version 6: [https://github.com/ReactiveX/rxjs](https://github.com/ReactiveX/rxjs).
+Los ejemplos aquí mostrados utilizan RxJS v6: [https://github.com/ReactiveX/rxjs](https://github.com/ReactiveX/rxjs).
 
-> Note:
-> Would you like to learn more about RxJS?
+> Nota:
+> ¿Te gustaría aprender más sobre observables?
 >
 > https://webtraining.zone/eventos/observables-con-javascript
 
-## Usage
+## Utilización
 
-### Installing
+### Instalación
 
-RxJS Boilerplate requires [Node.js](https://nodejs.org/en/) v6.14.0+ to work properly.
+RxJS Boilerplate requiere [Node.js](https://nodejs.org/en/) v6.14.0+.
 
-Install the RxJS Boilerplate dependencies by running:
+Instalar las dependencias mediante:
 
 ```
 npm install
 ```
 
-### Compiling
+### Compilación
 
-Compiling in `development` mode:
+Compilación en modo `development`:
 ```
 npm run dev
 ```
 
-Compiling in `production` mode:
+Compilación en modo `production`:
 ```
 npm run prod
 ```
 
-Watching for changes in `development` mode:
+Prender un "watcher" en modo `development`:
 ```
 npm run watch
 ```
 
-## Running globally
+## Ejecución global
 
-We recommend to install live-server globally:
+Recomendamos instalar `live-server` globalmente:
 ```
 npm install -g live-server
 ```
 
-Run the server and see your browser `console`:
+Finalmente ejecutar el proyecto y ver la `console` de tu navegador web:
 ```
 npm start
 ```

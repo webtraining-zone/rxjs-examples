@@ -70,6 +70,6 @@ export class OperatorsExamples {
         subscribe(
             number => console.log(number),
         );
-    
+
   }
 }
